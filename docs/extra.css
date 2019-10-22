@@ -1,0 +1,63 @@
+/* 
+
+  CSS Customisations 
+
+  of the 'readthedocs' theme
+  for the 'newskylabs-datasets-kuzushiji Documentation' site
+
+  Notes:
+
+  - Changing the default background color blue to a dark red: #C51236
+
+*/
+
+/*
+h1, h2, h3, h4 {
+  color: #C51236;
+}
+*/
+
+h1 {
+  color: #C51236;
+}
+
+.wy-side-nav-search {
+    background-color: #C51236;
+}
+
+/* Text color of the icon on the upper left */
+a.icon.icon-home {
+    color: white;
+}
+
+/* Text in navigation panel on the left */
+li.toctree-l1 a {
+    color: white;
+}
+
+a {
+    color: #C51236;
+}
+a:hover {
+    color: #F54266;
+}
+a:visited {
+    color: #A50216;
+}
+
+a code {
+    color: #C51236;
+}
+a:hover code {
+    color: #C51236;
+}
+a:visited code {
+    color: #C51236;
+}
+
+/* Links in code sections */
+.hljs-built_in {
+    color: #C51236;
+}
+
+/* fin */

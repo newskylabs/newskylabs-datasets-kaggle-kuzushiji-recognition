@@ -1,0 +1,60 @@
+## =========================================================
+## Copyright 2019 Dietrich Bollmann
+## 
+## Licensed under the Apache License, Version 2.0 (the "License");
+## you may not use this file except in compliance with the License.
+## You may obtain a copy of the License at
+## 
+##      http://www.apache.org/licenses/LICENSE-2.0
+## 
+## Unless required by applicable law or agreed to in writing, software
+## distributed under the License is distributed on an "AS IS" BASIS,
+## WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+## See the License for the specific language governing permissions and
+## limitations under the License.
+## =========================================================
+## newskylabs-datasets-kuzushiji documentation
+## ---------------------------------------------------------
+## 
+## See: 
+## 
+##   - mkdocs
+##     https://www.mkdocs.org/
+## 
+## Serve locally with:
+## 
+##   cd <base-dir>
+##   mkdocs serve
+## 
+## The page will be served at: http://127.0.0.1:8000/
+## 
+## Serve on github with:
+## 
+##   cd <base-dir>
+##   mkdocs gh-deploy
+## 
+## ---------------------------------------------------------
+
+# Site description
+site_name: newskylabs-datasets-kuzushiji Documentation
+site_description: NewSkyLabs newskylabs-datasets-kuzushiji Documentation.
+site_author: Dietrich Bollmann
+
+# Theme
+theme: 
+  name: readthedocs
+  prev_next_buttons_location: both
+
+extra_css: [extra.css]
+
+# Navigation
+nav:
+  - Home: index.md
+    
+# Copyright
+copyright: '<em>Copyright &copy; 2019 <a href="http://dietrichbollmann.com/">Dietrich Bollmann</a>. All rights reserved.</em>'
+
+## =========================================================
+## =========================================================
+
+## fin.
