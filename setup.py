@@ -36,15 +36,24 @@ def read_file(*parts):
     with codecs.open(os.path.join(package_dir, *parts), 'r') as fp:
         return fp.read()
 
-def find_packages(namespace):
+def find_packages(namespace, subnamespace):
     """
     Return a list of all Python packages defined in the 'namespace'
     directory
     """
-    return [
-        '{}.{}'.format(namespace, package) 
-        for package in setuptools.PackageFinder.find(where=namespace)
+    packages = [
+        '{}.{}.{}'.format(namespace, subnamespace, package)
+        for package in setuptools.PackageFinder.find(
+                where='{}/{}'.format(namespace, subnamespace)
+        )
     ]
+    
+    # DEBUG
+    print("DEBUG packages:")
+    for package in packages:
+        print("  - {}".format(package))
+
+    return packages
 
 ## =========================================================
 ## Setup
@@ -61,7 +70,7 @@ exec(read_file(namespace, subnamespace, subsubnamespace, '__about__.py'))
 long_description = read_file('README.md')
 
 # Find the list of packages
-packages = find_packages(namespace)
+packages = find_packages(namespace, subnamespace)
 
 # Setup package
 setuptools.setup(
@@ -79,6 +88,7 @@ setuptools.setup(
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
     ],
+    keywords='deep learning, deep learning datasets, dataset generation.',
     platforms=['Posix', 'Unix', 'Linux', 'MacOS X', 'Windows'],
     packages=packages,
     include_package_data=True,
